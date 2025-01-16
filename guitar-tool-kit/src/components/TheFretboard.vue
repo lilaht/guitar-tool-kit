@@ -11,7 +11,7 @@
         <template v-for="fret in frets">
             <rect role="presentation" :x="fret.x" :y="fret.y" :height="fret.height" :width="fret.width" :fill="fret.color" />
         </template>
-        <template v-for="string in stringRenderings">
+        <template v-for="string in strings">
             <rect role="presentation" :x="string.x" :y="string.y" :height="string.height" :width="string.width" :fill="string.color" />
         </template>
         <!-- <template v-for="note in scaleRendering">
@@ -28,7 +28,9 @@
 import { useFretboardRenderingStore } from '@/stores';
 
 const fretboardRenderingStore = useFretboardRenderingStore();
-const frets = fretboardRenderingStore.frets;
+const frets = fretboardRenderingStore.getFretRenderings();
+const strings = fretboardRenderingStore.getStringRenderings();
+const fretmakers = fretboardRenderingStore.getFretMarkers();
 
 
 console.log(fretboardRenderingStore);

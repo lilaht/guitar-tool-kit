@@ -1,3 +1,3 @@
-export { type INote, MusicalNote, ACCIDENTAL } from './musicalNote';
+export { type TNote, MusicalNote, ACCIDENTAL } from './musicalNote';
 export { TUNING } from './tuning';
-export { type IInstrument, INSTRUMENT } from './instrument';
+export { type TInstrument, INSTRUMENT } from './instrument';

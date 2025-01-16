@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { INSTRUMENT, type IInstrument } from '@/domain'
+import { INSTRUMENT, type TInstrument } from '@/domain'
 
 export const useFretboardOptionsStore = defineStore('fretboardOptionsStore', () => {
   const instrument = ref(INSTRUMENT.GUITAR);
@@ -9,7 +9,7 @@ export const useFretboardOptionsStore = defineStore('fretboardOptionsStore', () 
   
   //const 
 
-  function changeInstrument(selectedInstrument: IInstrument) {
+  function changeInstrument(selectedInstrument: TInstrument) {
     instrument.value = selectedInstrument;
   }
 

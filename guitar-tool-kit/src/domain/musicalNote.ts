@@ -5,13 +5,13 @@ export const enum ACCIDENTAL {
     FLAT = 'flat',
 }
 
-export interface INote {
+export type TNote =  {
     text: string,
     accidental: ACCIDENTAL,
 }
 
 export class MusicalNote {
-    static readonly NOTE: { [key: string]: INote } = {
+    static readonly NOTE: { [key: string]: TNote } = {
         _AF: {
             text: 'Ab',
             accidental: ACCIDENTAL.FLAT

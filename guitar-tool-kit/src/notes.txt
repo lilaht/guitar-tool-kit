@@ -1,3 +1,5 @@
 key vs scale
-    key highlights all notes in a given key all over the fretboard
-    scale highlights specific guitar scale (i.e. Pentatonic (Am Pent, Em Pent))
+    scale highlights all notes on fretboard in scale
+    mode highlights notes in that section
+
+input validators
