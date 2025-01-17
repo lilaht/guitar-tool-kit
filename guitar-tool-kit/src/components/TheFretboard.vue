@@ -4,9 +4,9 @@
     
         <title :id="ariaTitleId">{{ariaTitleText}}</title>
         <desc :id="ariaDescId">{{ariaDescText}}</desc>-->
-    <svg role="img" >
-        <template v-for="ref in referenceRendering">
-            <circle role="presentation" :cx="ref.cx" :cy="ref.cy" :r="ref.radius" :stroke="ref.stroke" :fill="ref.fill" />
+    <svg role="img" :viewBox="svgViewBox" :style="svgStyle">
+        <template v-for="fretmarker in fretmarkers">
+            <circle role="presentation" :cx="fretmarker.cx" :cy="fretmarker.cy" :r="fretmarker.radius" :fill="fretmarker.fill" />
         </template>
         <template v-for="fret in frets">
             <rect role="presentation" :x="fret.x" :y="fret.y" :height="fret.height" :width="fret.width" :fill="fret.color" />
@@ -30,8 +30,11 @@ import { useFretboardRenderingStore } from '@/stores';
 const fretboardRenderingStore = useFretboardRenderingStore();
 const frets = fretboardRenderingStore.getFretRenderings();
 const strings = fretboardRenderingStore.getStringRenderings();
-const fretmakers = fretboardRenderingStore.getFretMarkers();
+const fretmarkers = fretboardRenderingStore.getFretmarkerRenderings();
+const svgViewBox = fretboardRenderingStore.svgViewBox;
+const svgStyle = fretboardRenderingStore.svgStyle;
 
 
-console.log(fretboardRenderingStore);
+console.log(fretmarkers);
+
 </script>

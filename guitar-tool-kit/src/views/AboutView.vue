@@ -1,6 +1,13 @@
+<script setup lang="ts">
+  import TheFretboard from '@/components/TheFretboard.vue';
+  const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
+  </script>
+  
+
 <template>
   <div class="about">
     <h1>This is an about page</h1>
+    <TheFretboard />
   </div>
 </template>
 
